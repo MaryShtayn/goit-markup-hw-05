@@ -160,8 +160,7 @@ section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.container-hero {
-}
+
 .hero-overlay {
   width: 1600px;
   height: 600px;
@@ -214,8 +213,6 @@ section.hero {
   background-color: var(--secondary-accent-clr);
   letter-spacing: 0.03em;
 }
-.container-features {
-}
 
 .visually-hidden {
   position: absolute;
@@ -238,8 +235,6 @@ section.hero {
 }
 .features-list .feature-item + .feature-item {
   margin-left: 30px;
-}
-.feature-icon {
 }
 .icon-wrap {
   display: flex;
@@ -290,13 +285,37 @@ section.hero {
   gap: 30px;
 }
 .services-item {
+  position: relative;
+}
+.services-img {
 }
 .services-list .services-item + .services-item {
   margin-left: 30px;
 }
-
-.services-img {
+.overlay-box {
+  position: relative;
+  display: block;
 }
+.overlay-text {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-accent-clr);
+  text-transform: uppercase;
+  background-color: var(--secondary-bgd-clr);
+  opacity: 0.8;
+}
+
+/* Команда */
 .team {
   background-color: var(--accent-bgd-clr);
   letter-spacing: 0.03em;
