@@ -115,7 +115,6 @@ ul {
 .nav-link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 32px;
   color: inherit;
 }
 .nav-link:hover,
@@ -124,6 +123,15 @@ ul {
 }
 .nav-link.link.current {
   color: var(--accent-clr);
+}
+.nav-link.link.current::after {
+  content: '';
+  display: block;
+  margin-top: 28px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-clr);
 }
 
 .contacts-list {
