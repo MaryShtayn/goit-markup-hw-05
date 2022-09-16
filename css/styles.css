@@ -547,8 +547,8 @@ section.hero {
   opacity: 0;
 }
 
-.portfolio-text-overlay:hover,
-.portfolio-text-overlay:focus {
+.card-link:hover .portfolio-text-overlay,
+.card-link:focus .portfolio-text-overlay {
   opacity: 1;
 }
 .portfolio-box {
