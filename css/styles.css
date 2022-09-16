@@ -497,6 +497,7 @@ section.hero {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-item {
+  position: relative;
   width: calc((100%-60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -513,7 +514,37 @@ section.hero {
   color: var(--main-clr);
 }
 
-.card-img {
+.portfolio-card-overlay::before {
+  background-color: rgba(33, 150, 243, 0.9);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  min-height: 294px;
+  opacity: 0;
+}
+.portfolio-card-overlay:hover::before,
+.portfolio-card-overlay:focus::before {
+  opacity: 1;
+}
+.portfolio-text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: var(--secondary-accent-clr);
+  opacity: 0;
+}
+.portfolio-text-overlay:hover,
+.portfolio-text-overlay:focus {
+  opacity: 1;
 }
 .portfolio-box {
   padding: 20px 24px;
