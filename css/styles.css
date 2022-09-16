@@ -497,7 +497,6 @@ section.hero {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-item {
-  position: relative;
   width: calc((100%-60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -514,8 +513,15 @@ section.hero {
   color: var(--main-clr);
 }
 
+.portfolio-thumb {
+  position: relative;
+}
+.card-link:hover .portfolio-card-overlay::before,
+.card-link:focus .portfolio-card-overlay::before {
+  opacity: 1;
+}
+
 .portfolio-card-overlay::before {
-  background-color: rgba(33, 150, 243, 0.9);
   content: '';
   position: absolute;
   top: 0;
@@ -524,11 +530,9 @@ section.hero {
   width: 100%;
   min-height: 294px;
   opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
 }
-.portfolio-card-overlay:hover::before,
-.portfolio-card-overlay:focus::before {
-  opacity: 1;
-}
+
 .portfolio-text-overlay {
   position: absolute;
   top: 0;
@@ -542,6 +546,7 @@ section.hero {
   color: var(--secondary-accent-clr);
   opacity: 0;
 }
+
 .portfolio-text-overlay:hover,
 .portfolio-text-overlay:focus {
   opacity: 1;
