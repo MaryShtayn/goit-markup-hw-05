@@ -489,6 +489,7 @@ section.hero {
   margin-top: 50px;
 }
 .card-link {
+  
   transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -499,6 +500,7 @@ section.hero {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-item {
+  
   width: calc((100%-60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
@@ -514,16 +516,11 @@ section.hero {
 .card-item .link {
   color: var(--main-clr);
 }
-
 .portfolio-thumb {
   position: relative;
+   /* overflow: hidden; */
 }
-.card-link:hover .portfolio-card-overlay::before,
-.card-link:focus .portfolio-card-overlay::before {
-  opacity: 1;
-}
-
-.portfolio-card-overlay::before {
+ .portfolio-card-overlay::before {
   content: '';
   position: absolute;
   top: 0;
@@ -533,7 +530,7 @@ section.hero {
   min-height: 294px;
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
-}
+} 
 
 .portfolio-text-overlay {
   position: absolute;
@@ -546,13 +543,15 @@ section.hero {
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: var(--secondary-accent-clr);
-  opacity: 0;
+  opacity: 0; 
 }
 
-.card-link:hover .portfolio-text-overlay,
+.card-link:hover .portfolio-card-overlay::before,
+.card-link:focus .portfolio-card-overlay::before, .card-link:hover .portfolio-text-overlay,
 .card-link:focus .portfolio-text-overlay {
   opacity: 1;
 }
+
 .portfolio-box {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
